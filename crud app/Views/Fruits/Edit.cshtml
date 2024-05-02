@@ -1,0 +1,11 @@
+﻿@model Fruit
+
+<form asp-action="Edit" asp-controller="Fruits" method="Post">
+    <input name="Id" value="@Model.Id" hidden/>
+    <label>Name</label>
+    <input type="text" name="Name" class="form-control" value="@Model.Name"/>
+    <label>Price</label>
+    <input type="text" name="Price" class="form-control" value="@Model.Price"/><br />
+    <button type="submit" class="btn btn-success"> Save Changes</button>
+    <a class="btn btn-secondary" asp-action="Back" asp-controller="Fruits">Back</a>
+</form>
